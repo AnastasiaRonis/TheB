@@ -1,2 +1,2 @@
 # TheBRAND
-Это мой учебный проект.
+It is my education project.
