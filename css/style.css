@@ -39,16 +39,22 @@ a {
     gap: 41px;
 }
 
-
-svg:not(svg) {
-    transform-origin: 0px 0px;
+.header_btn {
     fill: #E8E8E8;
+}
+
+.header_btn:hover {
+    fill: #F16D7F;
+}
+
+.header_btn:active {
+    fill: #F26376;
 }
 
 .menu {
     display: flex;
     align-items: flex-end;
-    gap: 41px;
+    gap: 33px;
 }
 
 .top {
@@ -58,22 +64,17 @@ svg:not(svg) {
     align-items: center;
 }
 
-.photo_big {
-    width: 800.58px;
+.top_photo {
+    width: 801px;
     height: 764px;
-    left: 0px;
-    top: 75px;
-}
-
-.stick {
-    background: #F16D7F;
-    width: 12px;
-    height: 92px;
+    padding: 0 63px 0 0;
 }
 
 .slogan {
+    width: 405px;
+    border-left: 12px solid #F16D7F;
+    margin: 290px auto 381px;
     padding: 0 0 0 16px;
-    width: 377px;
 }
 
 .word_first {
@@ -107,41 +108,40 @@ svg:not(svg) {
 
 .categories_top {
     display: grid;
-    grid-template-columns: repeat(3, minmax(360px, 260px));
+    grid-template-columns: repeat(3, 360px);
     gap: 30px;
+    justify-content: center;
 }
 
 .categories_item {
-    min-height: 260px;
+    width: 100%;
 }
 
 .categories_big {
-    grid-column: span 3;
     padding: 0 0 96px 0;
-}
-
-.item_link {
-    display: block;
-    width: 100%;
-    min-height: 100%;
-    background-position: center;
-    background-size: cover;
+    grid-column: span 3;
 }
 
 .item_women {
-    background-image: url('../img/For\ women_1.png');
+    background-image: url('../img/forwomen_1.png');
+    width: 360px;
+    height: 260px;
 }
 
 .item_men {
-    background-image: url('../img/For\ men_2.jpg');
+    background-image: url('../img/formen_2.jpg');
+    width: 360px;
+    height: 260px;
 }
 
 .item_kids {
-    background-image: url('../img/For\ kids_3.png');
+    background-image: url('../img/forkids_3.png');
+    width: 360px;
+    height: 260px;
 }
 
 .item_accesopies {
-    background-image: url('../img/ACCESORIES_4.png');
+    background-image: url('../img/accesories_4.png');
 }
 
 .top_text {
@@ -150,7 +150,13 @@ svg:not(svg) {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    padding: 105px 103px;
+    padding: 105px 0;
+}
+
+.text_big {
+    width: 1140px;
+    height: 180px;
+    padding: 0;
 }
 
 .top_title {
@@ -199,6 +205,7 @@ svg:not(svg) {
     display: grid;
     grid-template-columns: repeat(3, 360px);
     gap: 30px;
+    justify-content: center;
 }
 
 .lower {
@@ -222,30 +229,30 @@ svg:not(svg) {
     width: 100%;
     max-width: 360px;
     height: 420px;
-    background-image: url('../img/Lower_1.png');
+    background-image: url('../img/lower_1.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .lower:nth-child(2)>.lower_photo {
-    background-image: url('../img/Lower_2.png');
+    background-image: url('../img/lower_2.png');
 }
 
 .lower:nth-child(3)>.lower_photo {
-    background-image: url('../img/Lower_3.png');
+    background-image: url('../img/lower_3.png');
 }
 
 .lower:nth-child(4)>.lower_photo {
-    background-image: url('../img/Lower_4.png');
+    background-image: url('../img/lower_4.png');
 }
 
 .lower:nth-child(5)>.lower_photo {
-    background-image: url('../img/Lower_5.png');
+    background-image: url('../img/lower_5.png');
 }
 
 .lower:nth-child(6)>.lower_photo {
-    background-image: url('../img/Lower_6.png');
+    background-image: url('../img/lower_6.png');
 }
 
 .lover_title {
@@ -312,4 +319,102 @@ svg:not(svg) {
 .btn:active {
     color: #FF6A6A;
     background-color: #fff;
+}
+
+@media (max-width: 1024px) {
+    .center {
+        max-width: 768px;
+    }
+
+    .header {
+        height: 74px;
+        gap: 424px;
+    }
+
+    .menu {
+        padding: 19px 32px 19px 0;
+    }
+
+    .header_btn {
+        gap: 25px;
+    }
+
+    .forma {
+        padding: 0 42px 0 0;
+    }
+
+    .top_photo {
+        width: 386px;
+        height: 368px;
+        padding: 0 39px 0 0;
+    }
+
+    .slogan {
+        width: 311px;
+        height: 92px;
+        margin: 138px auto 137px;
+    }
+
+    .word_first {
+        font-size: 44px;
+        line-height: 53px;
+    }
+
+    .word_second {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .word_third {
+        font-size: 24px;
+        line-height: 29px;
+    }
+   
+    .categories_top {
+        grid-template-columns: repeat(3, 232px);
+        gap: 19px;
+    }
+
+    .categories_big {
+        padding: 0 0 109px 0;
+    }
+
+    .item_women {
+        width: 232px;
+        height: 167px;
+    }
+
+    .item_men {
+        width: 232px;
+        height: 167px;
+    }
+
+    .item_kids {
+        width: 232px;
+        height: 167px;
+    }
+
+    .top_text {
+        padding: 59px 0;
+    }
+
+    .text_big {
+        width: 734px;
+        height: 116px;
+        padding: 33px 0;
+    }
+
+    .txt {
+        padding: 0 0 72px 0;
+    }
+
+    .lower_item {
+        display: grid;
+        grid-template-columns: repeat(2, 360px);
+        gap: 16px;
+    }
+
+    .btn {
+        margin: 32px auto 70px auto;
+    }
 }
