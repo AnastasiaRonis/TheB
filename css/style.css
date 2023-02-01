@@ -156,6 +156,11 @@ a {
 .text_big {
     width: 1140px;
     height: 180px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
     padding: 0;
 }
 
@@ -369,7 +374,7 @@ a {
         font-size: 24px;
         line-height: 29px;
     }
-   
+
     .categories_top {
         grid-template-columns: repeat(3, 232px);
         gap: 19px;
@@ -416,5 +421,134 @@ a {
 
     .btn {
         margin: 32px auto 70px auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .center {
+        max-width: 375px;
+    }
+
+    .header {
+        gap: 200px;
+        width: 375px;
+    }
+
+    .logo {
+        padding: 18px 0 16px 18px;
+    }
+
+    .menu {
+        padding: 25px 16px 26px 0;
+    }
+
+    .top {
+        width: 375px;
+    }
+
+    .top_photo {
+        display: none;
+    }
+
+    .forma {
+        display: none;
+    }
+
+    .menu_btn {
+        display: none;
+    }
+
+    .slogan {
+        width: 236px;
+        height: 66px;
+        margin: 148px auto 149px;
+    }
+
+    .word_first {
+        font-size: 38px;
+        line-height: 46px;
+    }
+
+    .word_second {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .word_third {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .container {
+        padding: 64px 0 0 0;
+    }
+
+    .categories_top {
+        display: block;
+    }
+
+    .categories_item {
+        padding: 0 16px 32px 16px;
+    }
+
+    .categories_big {
+        padding: 0 0 64px 0;
+    }
+
+    .item_women {
+        width: 343px;
+        height: 247px;
+    }
+
+    .item_men {
+        width: 343px;
+        height: 249px;
+    }
+
+    .item_kids {
+        width: 343px;
+        height: 248px;
+    }
+
+    .item_accesopies {
+        display: flex;
+        align-items: center;
+        width: 343px;
+        height: 111px;
+        margin: auto 16px;
+    }
+
+    .top_text {
+        padding: 98px 30px;
+    }
+
+    .text_big {
+        width: 343px;
+        height: 111px;
+    }
+
+    .txt {
+        padding: 0 0 64px 0;
+        margin: auto 14px auto 25px;
+        width: 336px;
+    }
+
+    .categories_lover {
+        display: flex;
+    }
+
+    .lower_item {
+        grid-template-columns: repeat(1, 359px);
+        gap: 15px;
+        padding: 0 8px;
+    }
+
+    .lower_photo {
+        width: 359px;
+        height: 580px;
+    }
+
+    .btn {
+        margin: 40px auto 85px 74px;
     }
 }
