@@ -27,16 +27,112 @@ a {
     height: 75px;
     fill: #E8E8E8;
     display: flex;
-    gap: 859px;
+    gap: 808px;
     align-items: center;
-    justify-content: space-evenly;
 }
 
 .logo {
-    padding: 18px 0 19px 23px;
+    padding: 18px 0 19px 230px;
     display: flex;
     align-items: flex-end;
     gap: 41px;
+}
+
+.menu {
+    display: flex;
+    align-items: flex-end;
+    gap: 33px;
+    position: relative;
+}
+
+.click_btn {
+    display: none;
+}
+
+.menu_btn {
+    display: flex;
+    width: 32px;
+    height: 23px;
+    padding: 0 0 3px;
+}
+
+.menu_btn:hover span {
+    background-color: #F16D7F;
+}
+
+.menu_btn:active span {
+    background-color: #F26376;
+}
+
+.menu_btn span {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 3px;
+    background-color: #E8E8E8;
+    position: relative;
+}
+
+.menu_btn span:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: inherit;
+    position: absolute;
+    top: -9px;
+    left: 0;
+}
+
+.menu_btn span:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: inherit;
+    position: absolute;
+    top: 9px;
+    left: 0;
+}
+
+.menu_box {
+    max-width: 232px;
+    width: 100%;
+    padding: 33px 99px 16px 0;
+    list-style: none;
+    position: absolute;
+    right: -279px;
+    top: 54px;
+    background: #FFFFFF;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+
+.click_btn:checked~.menu_box {
+    visibility: hidden;
+}
+
+.menu_box span {
+    padding: 0 0 24px 32px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.menu_item {
+    padding: 24px 0 16px 32px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #F16D7F;
+}
+
+.menu_list {
+    padding: 12px 0 0 53px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
 }
 
 .header_btn {
@@ -51,10 +147,8 @@ a {
     fill: #F26376;
 }
 
-.menu {
-    display: flex;
-    align-items: flex-end;
-    gap: 33px;
+.forma {
+    padding: 0 42px 0 0;
 }
 
 .top {
@@ -219,6 +313,69 @@ a {
     min-height: 100%;
     background-position: center;
     background-size: cover;
+    position: relative;
+    background: #F8F8F8;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.lower:hover .lower_photo::before {
+    content: "";
+    display: block;
+    width: 360px;
+    height: 420px;
+    background: rgba(58, 56, 56, 0.86);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.lower:hover .lower_btn {
+    display: flex;
+}
+
+.lower_btn:hover {
+    background-color: #ccc;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.lower_btn:hover .prise_btn {
+    fill: #000;
+}
+
+.lower_btn:active {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.lower_btn:active .prise_btn {
+    fill: #fff;
+}
+
+.lower_btn {
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 160px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #FFFFFF;
+    background: transparent;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: calc(50% - 80px);
+}
+
+.lower_btn .prise_btn {
+    fill: #fff;
+    margin: 0 14px 0 0;
 }
 
 .lower_text {
@@ -326,6 +483,167 @@ a {
     background-color: #fff;
 }
 
+
+.advantages {
+    background: #222224;
+
+    height: 341px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.advantages_list {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 360px);
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+
+    padding: 0 230px;
+}
+
+.advantages_logo {
+    height: 134px;
+}
+
+.sleding_logo {
+    fill: #F16D7F;
+}
+
+.advantages_title {
+    font-size: 20px;
+    line-height: 24px;
+    color: #FBFBFB;
+    padding: 28px 0 16px 0;
+}
+
+.advantages_txt {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FBFBFB;
+    padding: 0 20px;
+}
+
+.footer {
+    height: 448px;
+}
+
+.footer_list {
+    height: 448px;
+    box-sizing: border-box;
+    background-image: url(../img/photo_subscribe.jpg);
+    background-color: rgba(244, 244, 244, 0.7);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_photo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+    max-width: 360px;
+    padding: 0 0 0 230px;
+}
+
+.footer_call {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #222224;
+}
+
+.footer_subscribe {
+    width: 557px;
+    height: 61px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding: 0 230px;
+}
+
+.footer_request {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 167.2%;
+    text-align: center;
+    color: #222224;
+}
+
+.request_text {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 167.2%;
+    text-align: center;
+    color: #222224;
+    padding: 0 0 32px 0;
+}
+
+.request_email {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #222224;
+    opacity: 0.67;
+    width: 246px;
+    height: 49px;
+    border-radius: 20px 0 0 20px;
+    padding: 0 0 0 22px;
+    background: #E1E1E1;
+    border: none;
+    margin: 0;
+}
+
+.request_form {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    width: 90px;
+    height: 49px;
+    border-radius: 0 20px 20px 0;
+    text-align: center;
+    background: #F16D7F;
+    color: #FFFFFF;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer_date {
+    background: #222224;
+    height: 79px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 655px;
+}
+
+.footer_txt {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FBFBFB;
+
+}
+
 @media (max-width: 1024px) {
     .center {
         max-width: 768px;
@@ -336,8 +654,12 @@ a {
         gap: 424px;
     }
 
-    .menu {
-        padding: 19px 32px 19px 0;
+    .logo {
+        padding: 18px 0 18px 32px;
+    }
+
+    .menu_box {
+        display: none;
     }
 
     .header_btn {
@@ -419,8 +741,61 @@ a {
         gap: 16px;
     }
 
+    .lower:hover .lower_photo::before {
+        height: 78%;
+    }
+
     .btn {
         margin: 32px auto 70px auto;
+    }
+
+    .advantages {
+        height: 610px;
+        width: 768px;
+    }
+
+    .advantages_list {
+        grid-template-columns: repeat(1, 360px);
+        gap: 48px;
+        padding: 0;
+    }
+
+    .footer {
+        width: 768px;
+    }
+
+    .footer_list {
+        height: 614px;
+        width: 768px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 64px;
+        gap: 48px;
+    }
+
+    .footer_photo {
+        padding: 0 204px;
+    }
+
+    .footer_subscribe {
+        height: 137px;
+        padding: 0;
+    }
+
+    .request_btn {
+        padding: 0 0 110px;
+    }
+
+    .request_email {
+        border-radius: 20px;
+    }
+
+    .footer_date {
+        justify-content: center;
+        gap: 305px;
     }
 }
 
@@ -442,6 +817,15 @@ a {
         padding: 25px 16px 26px 0;
     }
 
+    .menu_btn {
+        display: block;
+        padding: 25px 0 0;
+    }
+
+    .menu_link {
+        display: none;
+    }
+
     .top {
         width: 375px;
     }
@@ -451,10 +835,6 @@ a {
     }
 
     .forma {
-        display: none;
-    }
-
-    .menu_btn {
         display: none;
     }
 
@@ -550,5 +930,78 @@ a {
 
     .btn {
         margin: 40px auto 85px 74px;
+    }
+
+    .advantages {
+        width: 375px;
+        justify-content: flex-start;
+        padding: 0 0 81px 0;
+    }
+
+    .advantages_list {
+        width: 347px;
+        height: 129px;
+        gap: 46px;
+    }
+
+    .advantages_logo {
+        padding: 48px 0 0 0;
+    }
+
+    .footer {
+        height: 550px;
+        width: 375px;
+    }
+
+    .footer_list {
+        padding: 64px 16px 109px;
+        gap: 59px;
+        width: 375px;
+        height: 550px;
+        flex-direction: row;
+        align-content: flex-end;
+    }
+
+    .footer_photo {
+        gap: 29px;
+        padding: 0 16px;
+    }
+
+    .photo_face {
+        padding: 62px 0 0 0;
+    }
+
+    .footer_call {
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    .request_email {
+        width: 200px;
+        height: 47px;
+    }
+
+    .request_form {
+        width: 81px;
+        height: 47px;
+    }
+
+    .request_btn {
+        padding: 0 0 109px;
+    }
+
+    .request_text {
+        font-size: 14px;
+        line-height: 36px;
+        padding: 0;
+    }
+
+    .footer_date {
+        height: 143px;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 40px;
+        padding: 43px 0 9px 0;
     }
 }
