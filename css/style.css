@@ -20,22 +20,42 @@ a {
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
+    
 }
 
 .header {
     background: #222222;
+    max-width: 1600px;
     height: 75px;
     fill: #E8E8E8;
     display: flex;
-    gap: 808px;
-    align-items: center;
+    /* gap: 859px; */
+    box-sizing: border-box;
+    padding: 0 230px 0 230px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    position: relative;
 }
 
+/* .header_link {
+    padding: 0 230px;
+} */
+
 .logo {
-    padding: 18px 0 19px 230px;
+    padding: 18px 0 19px;
     display: flex;
     align-items: flex-end;
     gap: 41px;
+}
+
+.header_logo:hover span {
+    background-color: #F16D7F;
+}
+
+.header_logo:active span {
+    background-color: #F26376;
 }
 
 .menu {
@@ -97,18 +117,35 @@ a {
 
 .menu_box {
     max-width: 232px;
+    height: 632px;
     width: 100%;
     padding: 33px 99px 16px 0;
     list-style: none;
     position: absolute;
-    right: -279px;
-    top: 54px;
+        top: 54px;
     background: #FFFFFF;
     box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    visibility: hidden;
+    left: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
+input[type="checkbox"] {
+    display: none;
+}
+
+/* input[type="checkbox"]:checked~.menu_box {
+display: block;
+} */
+
 .click_btn:checked~.menu_box {
-    visibility: hidden;
+    visibility: visible;
+}
+
+input[type="checkbox"]:checked~.menu_btn {
+    background: #222222;
 }
 
 .menu_box span {
@@ -125,6 +162,15 @@ a {
     font-size: 14px;
     line-height: 17px;
     color: #F16D7F;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menu_item ul {
+    display: flex;
+    gap: 11px;
+    flex-direction: column;
 }
 
 .menu_list {
@@ -147,27 +193,59 @@ a {
     fill: #F26376;
 }
 
+.basket_btn {
+    fill: #E8E8E8;
+    position: relative;
+}
+
+.choice {
+    display: block;
+    width: 19px;
+    height: 19px;
+    background-color: #F16D7F;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    top: -6px;
+    left: 174px;
+}
+
+.basket_btn:hover {
+    fill: #F16D7F;
+}
+
+.basket_btn:active {
+    fill: #F26376;
+}
+
 .forma {
     padding: 0 42px 0 0;
 }
 
 .top {
+    max-width: 1600px;
+    max-height: 764px;
     background: #F1E4E6;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+    box-sizing: border-box;
+    padding: 0 30px 0 0;
 }
 
 .top_photo {
+    box-sizing: border-box;
     width: 801px;
     height: 764px;
-    padding: 0 63px 0 0;
+    margin: 0 63px 0 0;
 }
 
 .slogan {
     width: 405px;
     border-left: 12px solid #F16D7F;
-    margin: 290px auto 381px;
+    margin: 290px auto 381px 0;
     padding: 0 0 0 16px;
 }
 
@@ -195,9 +273,14 @@ a {
 .container {
     background: #FFFFFF;
     padding: 65px 0 0 0;
-    width: 100%;
-    max-width: 1140px;
-    margin: 0 auto;
+    
+    width: 1140px;
+    
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .categories_top {
@@ -220,22 +303,31 @@ a {
     background-image: url('../img/forwomen_1.png');
     width: 360px;
     height: 260px;
+    background-color: rgba(33, 22, 22, 0.7);
+  background-blend-mode: darken;
 }
 
+
 .item_men {
-    background-image: url('../img/formen_2.jpg');
+    background-image: url('../img/formen_2.png');
     width: 360px;
     height: 260px;
+    background-color: rgba(33, 22, 22, 0.7);
+  background-blend-mode: darken;
 }
 
 .item_kids {
     background-image: url('../img/forkids_3.png');
     width: 360px;
     height: 260px;
+    background-color: rgba(33, 22, 22, 0.7);
+  background-blend-mode: darken;
 }
 
 .item_accesopies {
     background-image: url('../img/accesories_4.png');
+    background-color: rgba(33, 22, 22, 0.7);
+  background-blend-mode: darken;
 }
 
 .top_text {
@@ -469,8 +561,6 @@ a {
     color: #F26376;
     padding: 15px 39px;
     margin: 48px auto 60px auto;
-    box-sizing: border-box;
-    display: flex;
 }
 
 .btn:hover {
@@ -486,8 +576,7 @@ a {
 
 .advantages {
     background: #222224;
-
-    height: 341px;
+        height: 341px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -503,8 +592,6 @@ a {
     justify-content: center;
     gap: 30px;
     text-align: center;
-
-    padding: 0 230px;
 }
 
 .advantages_logo {
@@ -535,6 +622,7 @@ a {
 }
 
 .footer_list {
+    
     height: 448px;
     box-sizing: border-box;
     background-image: url(../img/photo_subscribe.jpg);
@@ -559,6 +647,7 @@ a {
 }
 
 .footer_call {
+    width: 359px;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
@@ -574,7 +663,7 @@ a {
     flex-direction: column;
     align-content: center;
     align-items: center;
-    padding: 0 230px;
+    margin: 0 230px;
 }
 
 .footer_request {
@@ -594,6 +683,11 @@ a {
     text-align: center;
     color: #222224;
     padding: 0 0 32px 0;
+}
+
+.request_btn {
+    max-width: 356px;
+    display: flex;
 }
 
 .request_email {
@@ -651,16 +745,44 @@ a {
 
     .header {
         height: 74px;
-        gap: 424px;
+        max-width: 768px;
+        padding: 18px 32px;
+        
     }
 
     .logo {
-        padding: 18px 0 18px 32px;
+        
     }
 
     .menu_box {
-        display: none;
+        height: 461px;
+        left: 0px;
+        padding: 20px 31px 12px 0;
+        display: block;
+        top: 53px;
     }
+
+    .menu_item {
+        padding: 12px 0 16px 32px;
+    }
+
+    .menu_item ul {
+        display: flex;
+        gap: 2px;
+        flex-direction: column;
+    }
+
+    .menu_link {
+        font-size: 8px;
+    }
+
+    .basket_btn {
+        
+       }
+
+       .choice {
+        
+       }
 
     .header_btn {
         gap: 25px;
@@ -673,7 +795,7 @@ a {
     .top_photo {
         width: 386px;
         height: 368px;
-        padding: 0 39px 0 0;
+        margin: 0 39px 0 0;
     }
 
     .slogan {
@@ -700,6 +822,7 @@ a {
     .categories_top {
         grid-template-columns: repeat(3, 232px);
         gap: 19px;
+        width: 736px;
     }
 
     .categories_big {
@@ -742,16 +865,17 @@ a {
     }
 
     .lower:hover .lower_photo::before {
-        height: 78%;
+        max-height: 420px;
     }
 
     .btn {
-        margin: 32px auto 70px auto;
+        margin: 32px auto 64px 278px;
     }
 
     .advantages {
         height: 610px;
         width: 768px;
+        padding: 48px 0 64px;
     }
 
     .advantages_list {
@@ -761,7 +885,7 @@ a {
     }
 
     .footer {
-        width: 768px;
+        
     }
 
     .footer_list {
@@ -782,7 +906,7 @@ a {
 
     .footer_subscribe {
         height: 137px;
-        padding: 0;
+        margin: 0;
     }
 
     .request_btn {
@@ -805,29 +929,50 @@ a {
     }
 
     .header {
-        gap: 200px;
         width: 375px;
-    }
-
-    .logo {
-        padding: 18px 0 16px 18px;
+        
     }
 
     .menu {
-        padding: 25px 16px 26px 0;
+        padding: 25px 16px 0 0;
     }
 
-    .menu_btn {
+    .menu_box {
+        height: 400px;
+        width: 100px;
+        left: -38px;
+        padding: 10px 50px 12px 0;
         display: block;
-        padding: 25px 0 0;
+        top: 64px;
     }
 
-    .menu_link {
-        display: none;
+    .menu_item {
+        padding: 4px 0 0 32px;
+        font-size: 10px;
     }
+
+    .menu_item ul {
+        display: flex;
+        gap: 2px;
+        flex-direction: column;
+    }
+
+    .menu_list {
+        font-size: 8px;
+        padding: 0 0 0 53px;
+    }
+
+   .basket_btn {
+    display: none;
+   }
+
+.choice {
+    display: none;
+}
 
     .top {
         width: 375px;
+        padding: 0;
     }
 
     .top_photo {
@@ -865,10 +1010,11 @@ a {
 
     .categories_top {
         display: block;
+        max-width: 343px;
     }
 
     .categories_item {
-        padding: 0 16px 32px 16px;
+        padding: 0 0 32px 0;
     }
 
     .categories_big {
@@ -895,7 +1041,7 @@ a {
         align-items: center;
         width: 343px;
         height: 111px;
-        margin: auto 16px;
+        
     }
 
     .top_text {
@@ -908,28 +1054,33 @@ a {
     }
 
     .txt {
-        padding: 0 0 64px 0;
-        margin: auto 14px auto 25px;
-        width: 336px;
+        padding: 0 0 64px;
     }
 
     .categories_lover {
         display: flex;
+        flex-direction: column;
     }
 
     .lower_item {
         grid-template-columns: repeat(1, 359px);
         gap: 15px;
-        padding: 0 8px;
+        
+    }
+
+    .lower:hover .lower_photo::before {
+        max-height: 418px;
     }
 
     .lower_photo {
         width: 359px;
-        height: 580px;
+        height: 418px;
     }
 
     .btn {
-        margin: 40px auto 85px 74px;
+        margin: 40px auto 96px 74px;
+        width: 212px;
+        padding: 15px;
     }
 
     .advantages {
@@ -950,7 +1101,7 @@ a {
 
     .footer {
         height: 550px;
-        width: 375px;
+        
     }
 
     .footer_list {
@@ -998,6 +1149,7 @@ a {
     }
 
     .footer_date {
+        width: 375px;
         height: 143px;
         display: flex;
         flex-direction: column-reverse;
