@@ -29,7 +29,6 @@ a {
     height: 75px;
     fill: #E8E8E8;
     display: flex;
-    /* gap: 859px; */
     box-sizing: border-box;
     padding: 0 240px 0 230px;
     flex-wrap: wrap;
@@ -38,10 +37,6 @@ a {
     align-content: space-between;
     position: relative;
 }
-
-/* .header_link {
-    padding: 0 230px;
-} */
 
 .logo {
     padding: 18px 0 19px;
@@ -146,25 +141,29 @@ a {
     width: 20px;
     height: 18px;
     opacity: 0.3;
-  }
-  
-  .dagger:hover {
+}
+
+.dagger:hover {
     opacity: 1;
-  }
-  .dagger:before, .dagger:after {
+}
+
+.dagger:before,
+.dagger:after {
     position: absolute;
     left: 15px;
     content: ' ';
     height: 20px;
     width: 2px;
     background-color: #333;
-  }
-  .dagger:before {
+}
+
+.dagger:before {
     transform: rotate(45deg);
-  }
-  .dagger:after {
+}
+
+.dagger:after {
     transform: rotate(-45deg);
-  }
+}
 
 .menu_box {
     max-width: 232px;
@@ -346,17 +345,6 @@ input[type="checkbox"]:checked~.menu_btn {
     width: 100%;
 }
 
-/* .categories_top:hover .categories_item ::before {
-    content: "";
-    display: block;
-    width: 360px;
-    height: 260px;
-    background: rgba(58, 56, 56, 0.86);
-    position: absolute;
-    top: 0;
-    left: 0;
-} */
-
 .categories_big {
     padding: 0 0 96px 0;
     grid-column: span 3;
@@ -402,12 +390,6 @@ input[type="checkbox"]:checked~.menu_btn {
     padding: 105px 0;
 }
 
-
-
-/* .top_text:hover {
-    background-color: transparent;
-} */
-
 .top_text:active {
     background-color: #222222;
 }
@@ -423,15 +405,9 @@ input[type="checkbox"]:checked~.menu_btn {
     padding: 0;
 }
 
-/* .text_big:hover {
-    background-color: #5D5D5D;
-} */
-
 .text_big:active {
     background-color: #222222;
 }
-
-
 
 .top_title {
     font-weight: 400;
@@ -665,7 +641,6 @@ input[type="checkbox"]:checked~.menu_btn {
     flex-direction: column;
     align-content: center;
     justify-content: center;
-
 }
 
 .advantages_list {
@@ -854,7 +829,8 @@ input[type="checkbox"]:checked~.menu_btn {
         left: 31px;
     }
 
-    .dagger:before, .dagger:after {
+    .dagger:before,
+    .dagger:after {
         left: 9px;
         height: 15px;
         top: 2px;
@@ -881,10 +857,6 @@ input[type="checkbox"]:checked~.menu_btn {
     .menu_link {
         font-size: 8px;
     }
-
-    .basket_btn {}
-
-    .choice {}
 
     .header_btn {
         gap: 25px;
@@ -986,8 +958,6 @@ input[type="checkbox"]:checked~.menu_btn {
         padding: 0;
     }
 
-    .footer {}
-
     .footer_list {
         height: 614px;
         width: 768px;
@@ -1030,7 +1000,6 @@ input[type="checkbox"]:checked~.menu_btn {
 
     .header {
         width: 375px;
-
     }
 
     .search_btn {
@@ -1043,7 +1012,8 @@ input[type="checkbox"]:checked~.menu_btn {
         gap: 0;
     }
 
-    .dagger:before, .dagger:after {
+    .dagger:before,
+    .dagger:after {
         left: 18px;
         height: 11px;
         top: -1px;
@@ -1153,7 +1123,6 @@ input[type="checkbox"]:checked~.menu_btn {
         align-items: center;
         width: 343px;
         height: 111px;
-
     }
 
     .top_text {
