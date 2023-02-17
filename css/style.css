@@ -20,7 +20,7 @@ a {
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
-    
+
 }
 
 .header {
@@ -31,7 +31,7 @@ a {
     display: flex;
     /* gap: 859px; */
     box-sizing: border-box;
-    padding: 0 230px 0 230px;
+    padding: 0 240px 0 230px;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
@@ -56,6 +56,30 @@ a {
 
 .header_logo:active span {
     background-color: #F26376;
+}
+
+.search_icon {
+    position: relative;
+}
+
+.search_btn {
+    width: 0px;
+    min-height: 20px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+    position: absolute;
+    top: 7px;
+    left: 40px;
+}
+
+.search_btn:focus {
+    padding: 5px;
+    width: 180px;
+    border: 1px solid #000;
+    transition: width 1s ease;
 }
 
 .menu {
@@ -115,6 +139,33 @@ a {
     left: 0;
 }
 
+.dagger {
+    position: absolute;
+    right: 20px;
+    top: 9px;
+    width: 20px;
+    height: 18px;
+    opacity: 0.3;
+  }
+  
+  .dagger:hover {
+    opacity: 1;
+  }
+  .dagger:before, .dagger:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 20px;
+    width: 2px;
+    background-color: #333;
+  }
+  .dagger:before {
+    transform: rotate(45deg);
+  }
+  .dagger:after {
+    transform: rotate(-45deg);
+  }
+
 .menu_box {
     max-width: 232px;
     height: 632px;
@@ -122,11 +173,11 @@ a {
     padding: 33px 99px 16px 0;
     list-style: none;
     position: absolute;
-        top: 54px;
+    top: 54px;
     background: #FFFFFF;
     box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
     visibility: hidden;
-    left: 130px;
+    left: 140px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -273,9 +324,9 @@ input[type="checkbox"]:checked~.menu_btn {
 .container {
     background: #FFFFFF;
     padding: 65px 0 0 0;
-    
+
     width: 1140px;
-    
+
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
@@ -288,11 +339,23 @@ input[type="checkbox"]:checked~.menu_btn {
     grid-template-columns: repeat(3, 360px);
     gap: 30px;
     justify-content: center;
+    /* position: relative; */
 }
 
 .categories_item {
     width: 100%;
 }
+
+/* .categories_top:hover .categories_item ::before {
+    content: "";
+    display: block;
+    width: 360px;
+    height: 260px;
+    background: rgba(58, 56, 56, 0.86);
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
 
 .categories_big {
     padding: 0 0 96px 0;
@@ -304,7 +367,7 @@ input[type="checkbox"]:checked~.menu_btn {
     width: 360px;
     height: 260px;
     background-color: rgba(33, 22, 22, 0.7);
-  background-blend-mode: darken;
+    background-blend-mode: darken;
 }
 
 
@@ -313,7 +376,7 @@ input[type="checkbox"]:checked~.menu_btn {
     width: 360px;
     height: 260px;
     background-color: rgba(33, 22, 22, 0.7);
-  background-blend-mode: darken;
+    background-blend-mode: darken;
 }
 
 .item_kids {
@@ -321,13 +384,13 @@ input[type="checkbox"]:checked~.menu_btn {
     width: 360px;
     height: 260px;
     background-color: rgba(33, 22, 22, 0.7);
-  background-blend-mode: darken;
+    background-blend-mode: darken;
 }
 
 .item_accesopies {
     background-image: url('../img/accesories_4.png');
     background-color: rgba(33, 22, 22, 0.7);
-  background-blend-mode: darken;
+    background-blend-mode: darken;
 }
 
 .top_text {
@@ -337,6 +400,16 @@ input[type="checkbox"]:checked~.menu_btn {
     justify-content: center;
     text-align: center;
     padding: 105px 0;
+}
+
+
+
+/* .top_text:hover {
+    background-color: transparent;
+} */
+
+.top_text:active {
+    background-color: #222222;
 }
 
 .text_big {
@@ -349,6 +422,16 @@ input[type="checkbox"]:checked~.menu_btn {
     text-align: center;
     padding: 0;
 }
+
+/* .text_big:hover {
+    background-color: #5D5D5D;
+} */
+
+.text_big:active {
+    background-color: #222222;
+}
+
+
 
 .top_title {
     font-weight: 400;
@@ -576,7 +659,7 @@ input[type="checkbox"]:checked~.menu_btn {
 
 .advantages {
     background: #222224;
-        height: 341px;
+    height: 341px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -622,7 +705,7 @@ input[type="checkbox"]:checked~.menu_btn {
 }
 
 .footer_list {
-    
+
     height: 448px;
     box-sizing: border-box;
     background-image: url(../img/photo_subscribe.jpg);
@@ -705,6 +788,11 @@ input[type="checkbox"]:checked~.menu_btn {
     margin: 0;
 }
 
+.form_btn {
+    border: none;
+    background: transparent;
+}
+
 .request_form {
     font-weight: 400;
     font-size: 14px;
@@ -718,6 +806,16 @@ input[type="checkbox"]:checked~.menu_btn {
     border: none;
     padding: 0;
     margin: 0;
+}
+
+.request_form:hover {
+    color: #fff;
+    background-color: #FF6A6A;
+}
+
+.request_form:active {
+    color: #FF6A6A;
+    background-color: #fff;
 }
 
 .footer_date {
@@ -747,11 +845,19 @@ input[type="checkbox"]:checked~.menu_btn {
         height: 74px;
         max-width: 768px;
         padding: 18px 32px;
-        
     }
 
-    .logo {
-        
+    .logo {}
+
+    .search_btn {
+        top: 5px;
+        left: 31px;
+    }
+
+    .dagger:before, .dagger:after {
+        left: 9px;
+        height: 15px;
+        top: 2px;
     }
 
     .menu_box {
@@ -776,13 +882,9 @@ input[type="checkbox"]:checked~.menu_btn {
         font-size: 8px;
     }
 
-    .basket_btn {
-        
-       }
+    .basket_btn {}
 
-       .choice {
-        
-       }
+    .choice {}
 
     .header_btn {
         gap: 25px;
@@ -884,9 +986,7 @@ input[type="checkbox"]:checked~.menu_btn {
         padding: 0;
     }
 
-    .footer {
-        
-    }
+    .footer {}
 
     .footer_list {
         height: 614px;
@@ -930,20 +1030,32 @@ input[type="checkbox"]:checked~.menu_btn {
 
     .header {
         width: 375px;
-        
+
+    }
+
+    .search_btn {
+        top: 20px;
+        left: -38px;
     }
 
     .menu {
-        padding: 25px 16px 0 0;
+        padding: 7px 0 0 0;
+        gap: 0;
+    }
+
+    .dagger:before, .dagger:after {
+        left: 18px;
+        height: 11px;
+        top: -1px;
     }
 
     .menu_box {
         height: 400px;
         width: 100px;
-        left: -38px;
-        padding: 10px 50px 12px 0;
+        left: -83px;
+        padding: 10px 46px 12px 0;
         display: block;
-        top: 64px;
+        top: 54px;
     }
 
     .menu_item {
@@ -962,13 +1074,13 @@ input[type="checkbox"]:checked~.menu_btn {
         padding: 0 0 0 53px;
     }
 
-   .basket_btn {
-    display: none;
-   }
+    .basket_btn {
+        display: none;
+    }
 
-.choice {
-    display: none;
-}
+    .choice {
+        display: none;
+    }
 
     .top {
         width: 375px;
@@ -1041,7 +1153,7 @@ input[type="checkbox"]:checked~.menu_btn {
         align-items: center;
         width: 343px;
         height: 111px;
-        
+
     }
 
     .top_text {
@@ -1065,7 +1177,7 @@ input[type="checkbox"]:checked~.menu_btn {
     .lower_item {
         grid-template-columns: repeat(1, 359px);
         gap: 15px;
-        
+
     }
 
     .lower:hover .lower_photo::before {
@@ -1101,7 +1213,7 @@ input[type="checkbox"]:checked~.menu_btn {
 
     .footer {
         height: 550px;
-        
+
     }
 
     .footer_list {
@@ -1115,7 +1227,7 @@ input[type="checkbox"]:checked~.menu_btn {
 
     .footer_photo {
         gap: 29px;
-        padding: 0 16px;
+        padding: 0;
     }
 
     .photo_face {
